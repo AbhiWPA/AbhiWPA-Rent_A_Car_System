@@ -11,6 +11,7 @@
     <meta name="description" content="System for rent a cars">
     <meta name="author" content="Abhishek Ashinsa">
     <meta name="owner" content="W.P.Abhishek Ashinsa">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 
     <!-- Font Awesome -->
     <link
@@ -101,16 +102,40 @@
         <h1 class="topic2">Select Your Choice...!!!</h1>
         <form class="row g-3">
             <div class="col-md-6">
-                <label for="brand" class="form-label">Select a Brand : </label>
+                <label for="brand" class="form-label text-light fw-bold">Select a Brand : </label>
                 <select class="form-select" aria-label="Default select example" id="brand">
                     <option selected>Select a brand</option>
                 </select>
             </div>
             <div class="col-md-6">
-                <label for="passengers" class="form-label">Number of Passengers : </label>
-                <input type="number" class="form-control" id="passengers">
+                <label for="passengers" class="form-label text-light fw-bold">Number of Passengers : </label>
+                <input class="form-control" id="passengers" type="number">
+            </div>
+            <div class="col-md-6">
+                <label for="color" class="form-label text-light fw-bold">Select Color : </label>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="color">
+                    <option selected>Select</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="price" class="form-label text-light fw-bold">Select Price Range : </label>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="price">
+                    <option selected>Select</option>
+                </select>
             </div>
         </form>
+    </div>
+
+    <div id="pics">
+        <div>
+            <img src="assets/img/subcar1.jpg">
+        </div>
+        <div>
+            <img src="assets/img/subcar2.jpg">
+        </div>
+        <div>
+            <img src="assets/img/subcar3.jpg">
+        </div>
     </div>
 </section>
 
