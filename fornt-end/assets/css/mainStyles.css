@@ -101,7 +101,14 @@ body {
 
 #footer {
     width: 100vw;
-    height: 500px;
+    height: 300px;
+}
+
+#selection {
+    position: relative;
+    width: 100vw;
+    height: 98vh;
+    margin-top: 42vh;
 }
 
 
