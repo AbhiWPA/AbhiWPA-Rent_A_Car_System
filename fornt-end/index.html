@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Easy Car Rent</title>
+    <title>Easy Car Rental pvt. ltd.</title>
     <meta content="width=device-width initial-scale=1" name="viewport">
     <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/mainStyles.css">
     <link rel="stylesheet" href="assets/css/frameWork/bootstrap.min.css">
     <meta name="keywords" content="abhishek, abhi, ashinsa, wpa, WPA">
     <meta name="description" content="System for rent a cars">
@@ -26,48 +27,45 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
             rel="stylesheet"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <!--navBar-->
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary text-light bg-dark fixed-top shadow-lg">
+    <div class="container-fluid text-light">
+        <h1 class="navbar-brand text-danger fw-bolder" style="font-family: 'Kalam', cursive; font-size: 25px; margin: 0; padding: 0;">Easy Car Rental</h1>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link text-light" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light">Disabled</a>
+            </li>
+        </ul>
     </div>
 </nav>
 <!--navBar-->
 
+<div id="car">
+    <img src="assets/img/dashBoard.jpg">
+    <div class="text-box">
+        <h1 class="topic">Rent Out Your Favourite Car From Here</h1>
+        <p><b>Welcome To Easy Car Rental Pvt. Ltd.<br> </b>All Car Brands Included and You Can Rent Out One or More of Them</p>
+        <a href="pages/signUpPage.html" class="hero-btn"><b> Sign Up Now </b></a><br>
+        <br><h3>OR</h3><br>
+        <a href="pages/LoginPage.html" class="hero-btn"><b> Log In </b></a>
+    </div>
+</div>
 
 
 <!-- MDB -->

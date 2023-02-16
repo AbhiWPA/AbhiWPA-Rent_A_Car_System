@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#car {
+    width: 100vw;
+    height: 100vh;
+}
+
+#car>img {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.text-box{
+    width: 90%;
+    color: cornsilk;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.topic {
+    color: #a8f6ec;
+    font-weight: 600;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+.hero-btn{
+    width: 250px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 25px;
+    padding: 12px 34px;
+    font-size: 23px;
+    background: transparent;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 3px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+
+
+
