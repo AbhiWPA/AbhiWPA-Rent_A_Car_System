@@ -1,27 +1,30 @@
+/*
+* @Created by: Abhishek Ashinsa
+* @Date: 19/07/2022
+* @Project: E-Tech Computers
+* */
+
 *{
     margin: 0;
-    padding-top: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
 .body-style{
-    /*width: 50%;*/
-    /*height: 50%;*/
-    /*background-size: 100%;*/
-}
-
-.signup {
-    margin-left: 5%;
-    margin-top: 5%;
+    link: #fff;
+    link: #ffffff;
+    width: 50%;
+    height: 50%;
+    background-image: url("../assets/cloud-computing-banner-background-smart-city.jpg");
+    background-size: 100%;
 }
 
 .row{
     padding-top: 40px;
     width: 1300px;
-    height: 500px;
-    margin-top: 10%;
+    height: 740px;
+    margin-top: 2%;
     margin-bottom: 2%;
-    margin-left: 25%;
     display: flex;
     justify-content: space-between;
 }
@@ -58,7 +61,15 @@ h1{
     outline: none;
 }
 
-.btnLogin {
+p1 {
+    font-size: 12px;
+    text-align: center;
+    font-weight: 600;
+    margin-left: 15%;
+}
+
+
+.btnSignUp{
     width: 70%;
     height: 35px;
     font-size: 20px;
@@ -72,19 +83,49 @@ h1{
     cursor: pointer;
 }
 
-p1 {
-    font-size: 12px;
-    margin-left: 35%;
+p2 {
+    margin-left: 10px;
     font-weight: 600;
+}
+
+.icons{
+    top: 50%;
+    margin-left: 10px;
+}
+
+.icons ul li {
+    height: 40px;
+    width: 90px;
+    border-radius: 7px;
+    display: inline-block;
+    padding-left: 5px;
+    padding-top: 6px;
+    margin-top: 5px;
+    color: #fff;
+    background: #000;
 }
 
 p3 {
     font-size: 16px;
     text-align: center;
     font-weight: 600;
-    margin-left: 5%;
+    margin-left: 15%;
 }
 
+.hr1{
+    width: 40%;
+    margin-left: 6%;
+}
+.hr2{
+    width: 40%;
+    margin: -22px 54%;
+}
+.or {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    margin: -15px auto 10px;
+}
 .head-icon {
     margin-left: 40%;
     width: 80px;
