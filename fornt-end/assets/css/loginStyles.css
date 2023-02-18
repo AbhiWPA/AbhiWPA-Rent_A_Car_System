@@ -10,6 +10,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .body-style{
     link: #fff;
     link: #ffffff;
@@ -20,6 +24,7 @@
 
 .signup {
     margin-top: 50px;
+    margin-left: 25%;
 }
 
 .row{
@@ -28,16 +33,17 @@
     height: fit-content;
     margin-top: 2%;
     margin-bottom: 2%;
+    margin-left: 25%;
     display: flex;
     justify-content: space-between;
 }
 
 .layer-style{
     flex-basis: 32%;
-    background-color: #ffffff;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(0,0,0,0.8));
     border-radius: 10px;
     margin-bottom: 2%;
-    margin-left: 30%;
+    margin-left: 25%;
     box-sizing: border-box;
     transition: 0.5s;
 }

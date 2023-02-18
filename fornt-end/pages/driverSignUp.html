@@ -25,7 +25,7 @@
 <section class="signup">
 
     <div class="row">
-        <div class="layer-style">
+        <div class="layer-style" style="background: linear-gradient(rgba(255,255,255,0.8), rgba(0,0,0,0.8));">
             <img src="../assets/img/user.png" class="head-icon">
             <h1><b>Sign Up Now</b></h1>
             <hr>
@@ -34,19 +34,22 @@
             <input type="password" class="input-box" placeholder="   Password"><br>
             <input type="password" class="input-box" placeholder="   Contact"><br>
             <input type="password" class="input-box" placeholder="   Address"><br>
-            <input type="password" class="input-box" placeholder="   Age"><br><br>
-            <input class="form-control text-light" id="nic" type="file" />
-            <div class="small text-muted mt-2 text-black">Upload your NIC or any other relevant file. Max file
+            <input type="password" class="input-box" placeholder="   Age"><br>
+
+            <div class="small mt-2 text-white">Upload your NIC or any other relevant file. Max file
+                size 50 MB</div>
+            <input class="form-control text-black" id="nic" type="file" />
+
+            <div class="small mt-2 text-white">Upload your Driving Licence or any other relevant file. Max file
                 size 50 MB</div>
             <input class="form-control text-black" id="formFileLg" type="file" />
-            <div class="small text-muted mt-2 text-light">Upload your Driving Licence or any other relevant file. Max file
-                size 50 MB</div>
-            <p1><span><input type="checkbox"> I Agree to the <a href="#">Terms and Conditions</a></span></p1><br><br>
-            <button type="button" class="btnSignUp">Sign Up</button><br><br><br>
-            <p class="or"> OR </p>
+
+            <p1 style="color: white;"><span><input type="checkbox"> I Agree to the <a href="#">Terms and Conditions</a></span></p1><br><br>
+            <a type="button" class="btn btn-primary btnSignUp" target="_parent" type="submit">Sign Up</a><br><br>
+            <p class="or text-white"> OR </p>
             <br><br>
 
-            <p style="margin-top: -60px; font-weight: 600; margin-left: 38%;">
+            <p style="margin-top: -60px; font-weight: 600; margin-left: 38%; color: white">
                 Sign Up With :
             </p><br>
             <div class="icons" style="margin-top: -20px; margin-left: 70px;">
@@ -67,9 +70,15 @@
                         <i class="fab fa-github"></i>
                     </button>
                 </ul>
-            </div><br>
+            </div>
 
-            <p3>Already Have an Account ? <a href="../pages/loginPage.html">Sign in</a></p3>
+            <p3 class="text-white">Already Have an Account ? <a href="../pages/loginPage.html">Sign in</a></p3>
+
+            <div class="ms-2" style="margin-left: 40%;">
+                <a class="btn btn-outline-light" href="../index.html" target="_parent" type="submit" style="margin-left: 100px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5ZM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5Z"/>
+                </svg>Home Page</a>
+            </div><br>
 
         </div>
     </div>
