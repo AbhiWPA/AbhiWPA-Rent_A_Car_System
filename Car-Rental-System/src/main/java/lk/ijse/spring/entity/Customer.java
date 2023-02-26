@@ -12,7 +12,7 @@ import javax.persistence.Id;
 @Entity
 public class Customer {
     @Id
-    private String id;
+    private int id;
     private String name;
     private String pswd;
     private String mail;
