@@ -47,8 +47,8 @@
                                 <div class="row">
                                     <div class="col-md-12 mb-4">
                                         <div class="form-outline">
-                                            <input type="text" id="form3Example1m" class="form-control form-control-lg text-light" />
-                                            <label class="form-label text-light" for="form3Example1m">User Name</label>
+                                            <input type="text" id="txtCustomerName" class="form-control form-control-lg text-light"/>
+                                            <label class="form-label text-light" for="txtCustomerName">User Name</label>
                                         </div>
                                     </div>
                                 </div>
@@ -56,28 +56,28 @@
                                 <div class="row">
                                     <div class="col-md-12 mb-4">
                                         <div class="form-outline">
-                                            <input type="password" id="form3Example1m1" class="form-control text-light form-control-lg" />
-                                            <label class="form-label text-light" for="form3Example1m1">Password</label>
+                                            <input type="password" id="txtCustomerPassword" class="form-control text-light form-control-lg" />
+                                            <label class="form-label text-light" for="txtCustomerPassword">Password</label>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12 mb-4">
                                         <div class="form-outline">
-                                            <input type="text" id="contact" class="form-control form-control-lg text-light" />
-                                            <label class="form-label text-light" for="contact">Email</label>
+                                            <input type="text" id="txtCustomerMail" class="form-control form-control-lg text-light" />
+                                            <label class="form-label text-light" for="txtCustomerMail">Email</label>
                                         </div>
                                     </div>
 
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <input type="tel" id="form3Example8" class="form-control form-control-lg text-light" />
-                                    <label class="form-label text-light" for="form3Example8">Contact Number</label>
+                                    <input type="tel" id="txtCustomerContact" class="form-control form-control-lg text-light" />
+                                    <label class="form-label text-light" for="txtCustomerContact">Contact Number</label>
                                 </div>
 
                                 <div class="col-md-12 pe-5 mb-4">
 
-                                    <input class="form-control form-control-lg text-light" id="nic" type="file" />
+                                    <input class="form-control form-control-lg text-light" id="NIC" type="file" />
                                     <div class="small text-muted mt-2 text-light">Upload your NIC or any other relevant file. Max file
                                         size 50 MB</div>
 
@@ -85,7 +85,7 @@
 
                                 <div class="col-md-12 pe-5 mb-4">
 
-                                    <input class="form-control form-control-lg text-light" id="formFileLg" type="file" />
+                                    <input class="form-control form-control-lg text-light" id="licence" type="file" />
                                     <div class="small text-muted mt-2 text-light">Upload your Driving Licence or any other relevant file. Max file
                                         size 50 MB</div>
 
@@ -101,11 +101,11 @@
 
                                 <div class="row">
                                     <div class="col-md-6 mb-4">
-                                        <button type="button" class="btn btn-danger col-12">Clear</button>
+                                        <button type="button" id="btnClearAll" class="btn btn-danger col-12">Clear</button>
                                     </div>
 
                                     <div class="col-md-6 mb-4">
-                                        <button type="button" class="btn btn-primary col-12">Sign in</button>
+                                        <button type="button" id="btnSignIn" class="btn btn-primary col-12">Sign in</button>
                                     </div>
                                 </div>
 
@@ -139,9 +139,6 @@
 
                             </div>
                             <div class="ms-5">
-                                <a class="btn btn-outline-light" href="../index.html" target="_parent" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5ZM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5Z"/>
-                                </svg>Home Page</a>
                             </div>
                         </div>
                     </div>
@@ -153,5 +150,6 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
 <script type="text/javascript" src="../assets/css/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../assets/js/signUp.js"></script>
 </body>
 </html>
