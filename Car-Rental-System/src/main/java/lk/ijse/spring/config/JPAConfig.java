@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackageClasses = {})
+@EnableJpaRepositories(basePackages = {"lk.ijse.spring.repo"})
 public class JPAConfig {
 
     @Bean
@@ -31,13 +31,11 @@ public class JPAConfig {
 
     @Bean
     public DataSource dataSource(){
-        //we use this data source only for testing purposes (Development)
-        //if we are in (Production) we can use a DBCP pool
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://localhost:3306/spring_jpa?createDatabaseIfNotExist=true");
+        ds.setUrl("jdbc:mysql://localhost:3306/easyCar?createDatabaseIfNotExist=true");
         ds.setUsername("root");
-        ds.setPassword("sanu1234");
+        ds.setPassword("1234");
         return ds;
     }
 
