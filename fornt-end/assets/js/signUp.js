@@ -1,11 +1,12 @@
 
-let baseUrl = "http://localhost:8080/app/"
+let baseUrl = "http://localhost:8080/Car_Rental_System_war_exploded/";
 
 var lastId;
-checkLastId();
+check();
 
-function checkLastId(){
 
+function check(){
+    console.log("in method");
     $.ajax({
         url: baseUrl+'customer',
         method: 'get',
@@ -16,9 +17,12 @@ function checkLastId(){
                 idList.push(cus.id);
             }
             lastId = idList.slice(-1);
+            console.log("last id generated"+lastId);
         }
     });
 }
+
+
 
 $("#btnSignIn").click(function(){
     saveCustomer();
