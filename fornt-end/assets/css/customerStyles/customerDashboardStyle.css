@@ -801,8 +801,8 @@ button, a { transition: var(--transition); }
 .footer-list:last-child > li:first-child { column-span: all; }
 
 .footer-bottom {
-  background: var(--gradient);
-  border: 1px solid var(--white);
+  background: #1c1c1f;
+  border: 1px solid #1c1c1f;
   border-radius: var(--radius-18) var(--radius-18) 0 0;
   padding: 20px;
 }
