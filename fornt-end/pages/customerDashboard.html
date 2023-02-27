@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Car Rental</title>
+
+    <!--
+      - favicon
+    -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!--
+      - custom css link
+    -->
+    <link rel="stylesheet" href="../assets/css/customerStyles/customerDashboardStyle.css">
+    <link rel="stylesheet" href="../assets/css/adminStyles/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../assets/css/adminStyles/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="../assets/css/adminStyles/select2.min.css">
+    <link rel="stylesheet" href="../assets/css/adminStyles/select2-bootstrap.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!--
+      - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<!--
+  - #HEADER
+-->
+
+<header class="header" data-header style="background-color: black; color: white;">
+    <div class="container" >
+
+        <div class="overlay" data-overlay></div>
+
+        <a href="#" class="logo">
+            <!--            <img src="" alt="Ridex logo">-->
+        </a>
+
+        <nav class="navbar" data-navbar  style="background-color: black">
+            <ul class="navbar-list">
+
+                <li>
+                    <a href="../index.html" class="navbar-link" data-nav-link style="color: white;">Home</a>
+                </li>
+
+                <li>
+                    <a href="#featured-car" class="navbar-link" data-nav-link style="color: white;">Explore cars</a>
+                </li>
+
+                <li>
+                    <a href="#blog" class="navbar-link" data-nav-link style="color: white;">Contact Us</a>
+                </li>
+
+                <!--                <li>-->
+                <!--                    <a href="#" class="navbar-link" data-nav-link>About us</a>-->
+                <!--                </li>-->
+
+                <!--                <li>-->
+                <!--                    <a href="#blog" class="navbar-link" data-nav-link>Blog</a>-->
+                <!--                </li>-->
+
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+
+            <div class="header-contact">
+                <a href="tel:0771469122" class="contact-link" style="color: white;">0764988360</a>
+
+                <span class="contact-time" style="color: white;">Mon - Sat: 9:00 am - 6:00 pm</span>
+            </div>
+
+            <img src="../assets/img/icons8-name-50.png">
+
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
+                <h6 class="p-3 mb-0">Profile</h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                        <div class="preview-icon bg-dark rounded-circle">
+                            <img src="../assets/img/icons8-services-26.png" alt="" style="max-height: 25px; max-width: 25px;">
+                        </div>
+                    </div>
+                    <div class="preview-item-content">
+                        <p class="preview-subject mb-1">Settings</p>
+                    </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                        <div class="preview-icon bg-dark rounded-circle">
+                            <img src="../assets/img/icons8-power-off-button-64.png" alt="" style="max-height: 25px; max-width: 25px;">
+                        </div>
+                    </div>
+                    <div class="preview-item-content">
+                        <p class="preview-subject mb-1">Log out</p>
+                    </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <p class="p-3 mb-0 text-center">Advanced settings</p>
+            </div>
+            <a href="#" id="profile-dropdown" data-toggle="dropdown"><img src="../assets/img/icons8-double-down-26.png" style="right: 50px; margin-bottom: 15px; max-width: 15px; max-height: 15px;"></a>
+
+            <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+
+
+
+
+<main style="background-color: black">
+    <article>
+
+        <!--
+          - #HERO
+        -->
+
+        <section class="section hero" id="home">
+
+            <div class="container">
+
+                <div class="hero-content">
+                    <h2 class="h1 hero-title text-white">The easy way to <br>Rent a Car</h2>
+
+                    <p class="hero-text">
+                        Live in Sri Lanka, New Jerset and Connecticut!
+                    </p>
+                </div>
+
+                <div class="hero-banner" style="background: url('../assets/img/cars2.jpg') no-repeat; background-size: cover"></div>
+
+            </div>
+        </section>
+
+
+
+
+
+        <!--
+          - #FEATURED CAR
+        -->
+
+        <section class="section featured-car" id="featured-car">
+            <div class="container">
+
+                <div class="title-wrapper">
+                    <h2 class="h2 section-title text-danger font-weight-bold">Featured cars</h2>
+
+                    <a href="#" class="featured-car-link">
+                        <span>View more</span>
+
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </a>
+                </div>
+
+                <ul class="featured-car-list">
+
+                    <li>
+                        <div class="featured-car-card" style="background-color: #1c1c1f!important;">
+
+                            <figure class="card-banner" >
+                                <img src="../assets/img/cars/alto.jpg" alt="Suzuki Alto" loading="lazy" width="440" height="300"
+                                     class="w-100">
+                            </figure>
+
+                            <div class="card-content" style="background-color: #1c1c1f;">
+
+                                <div class="card-title-wrapper" >
+                                    <h3 class="h3 card-title">
+                                        <a href="#">Suzuki Alto</a>
+                                    </h3>
+
+                                    <data class="year" value="2021">2021</data>
+                                </div>
+
+                                <ul class="card-list">
+
+                                    <li class="card-list-item" style="background-color: #1c1c1f;">
+                                        <ion-icon name="people-outline"></ion-icon>
+
+                                        <span class="card-item-text">4 People</span>
+                                    </li>
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="flash-outline"></ion-icon>
+
+                                        <span class="card-item-text">Gasoline</span>
+                                    </li>
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="speedometer-outline"></ion-icon>
+
+                                        <span class="card-item-text">18km / 1-litre</span>
+                                    </li>
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                                        <span class="card-item-text">Manual</span>
+                                    </li>
+
+                                </ul>
+
+                                <div class="card-price-wrapper">
+
+                                    <p class="card-price">
+                                        <strong>Rs 5000.00</strong> / Per Day
+                                    </p>
+
+                                    <button class="btn fav-btn" aria-label="Add to favourite list">
+                                        <ion-icon name="heart-outline"></ion-icon>
+                                    </button>
+
+                                    <button class="btn">Rent now</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="featured-car-card">
+
+                            <figure class="card-banner">
+                                <img src="assest/wagonr%20new.jpg" alt="Suzuki Wagon R" loading="lazy" width="440" height="300"
+                                     class="w-100">
+                            </figure>
+
+                            <div class="card-content">
+
+                                <div class="card-title-wrapper">
+                                    <h3 class="h3 card-title">
+                                        <a href="#">Suzuki Wagon R</a>
+                                    </h3>
+
+                                    <data class="year" value="2019">2019</data>
+                                </div>
+
+                                <ul class="card-list">
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="people-outline"></ion-icon>
+
+                                        <span class="card-item-text">4 People</span>
+                                    </li>
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="flash-outline"></ion-icon>
+
+                                        <span class="card-item-text">Semi Hybrid</span>
+                                    </li>
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="speedometer-outline"></ion-icon>
+
+                                        <span class="card-item-text">20km / 1-litre</span>
+                                    </li>
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                                        <span class="card-item-text">Automatic</span>
+                                    </li>
+
+                                </ul>
+
+                                <div class="card-price-wrapper">
+
+                                    <p class="card-price">
+                                        <strong>Rs 7000.00</strong> / Per Day
+                                    </p>
+
+                                    <button class="btn fav-btn" aria-label="Add to favourite list">
+                                        <ion-icon name="heart-outline"></ion-icon>
+                                    </button>
+
+                                    <button class="btn">Rent now</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="featured-car-card">
+
+                            <figure class="card-banner">
+                                <img src="assest/aqua.webp" alt="Toyota Aqua" loading="lazy" width="440"
+                                     height="300" class="w-100">
+                            </figure>
+
+                            <div class="card-content">
+
+                                <div class="card-title-wrapper">
+                                    <h3 class="h3 card-title">
+                                        <a href="#">Toyota Aqua</a>
+                                    </h3>
+
+                                    <data class="year" value="2020">2020</data>
+                                </div>
+
+                                <ul class="card-list">
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="people-outline"></ion-icon>
+
+                                        <span class="card-item-text">4 People</span>
+                                    </li>
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="flash-outline"></ion-icon>
+
+                                        <span class="card-item-text">Hybrid</span>
+                                    </li>
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="speedometer-outline"></ion-icon>
+
+                                        <span class="card-item-text">25Km / 1-litre</span>
+                                    </li>
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                                        <span class="card-item-text">Automatic</span>
+                                    </li>
+
+                                </ul>
+
+                                <div class="card-price-wrapper">
+
+                                    <p class="card-price">
+                                        <strong>Rs 10000.00</strong> / Per Day
+                                    </p>
+
+                                    <button class="btn fav-btn" aria-label="Add to favourite list">
+                                        <ion-icon name="heart-outline"></ion-icon>
+                                    </button>
+
+                                    <button class="btn">Rent now</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="featured-car-card">
+
+                            <figure class="card-banner">
+                                <img src="assest/prius.jpg" alt="Toyota Prius" loading="lazy" width="440"
+                                     height="300" class="w-100">
+                            </figure>
+
+                            <div class="card-content">
+
+                                <div class="card-title-wrapper">
+                                    <h3 class="h3 card-title">
+                                        <a href="#">Toyota Prius</a>
+                                    </h3>
+
+                                    <data class="year" value="2020">2020</data>
+                                </div>
+
+                                <ul class="card-list">
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="people-outline"></ion-icon>
+
+                                        <span class="card-item-text">4 People</span>
+                                    </li>
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="flash-outline"></ion-icon>
+
+                                        <span class="card-item-text">Hybrid</span>
+                                    </li>
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="speedometer-outline"></ion-icon>
+
+                                        <span class="card-item-text">20Km / 1-litre</span>
+                                    </li>
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                                        <span class="card-item-text">Automatic</span>
+                                    </li>
+
+                                </ul>
+
+                                <div class="card-price-wrapper">
+
+                                    <p class="card-price">
+                                        <strong>rs 12000.00</strong> / Per Day
+                                    </p>
+
+                                    <button class="btn fav-btn" aria-label="Add to favourite list">
+                                        <ion-icon name="heart-outline"></ion-icon>
+                                    </button>
+
+                                    <button class="btn">Rent now</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="featured-car-card">
+
+                            <figure class="card-banner">
+                                <img src="assest/bmw.jpg" alt="BMW 4 Series GTI 2021" loading="lazy" width="440"
+                                     height="300" class="w-100">
+                            </figure>
+
+                            <div class="card-content">
+
+                                <div class="card-title-wrapper">
+                                    <h3 class="h3 card-title">
+                                        <a href="#">BMW 4 Series GTI</a>
+                                    </h3>
+
+                                    <data class="year" value="2021">2021</data>
+                                </div>
+
+                                <ul class="card-list">
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="people-outline"></ion-icon>
+
+                                        <span class="card-item-text">5 People</span>
+                                    </li>
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="flash-outline"></ion-icon>
+
+                                        <span class="card-item-text">Gasoline</span>
+                                    </li>
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="speedometer-outline"></ion-icon>
+
+                                        <span class="card-item-text">7.6km / 1-litre</span>
+                                    </li>
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                                        <span class="card-item-text">Automatic</span>
+                                    </li>
+
+                                </ul>
+
+                                <div class="card-price-wrapper">
+
+                                    <p class="card-price">
+                                        <strong>Rs 20000.00</strong> / Per Day
+                                    </p>
+
+                                    <button class="btn fav-btn" aria-label="Add to favourite list">
+                                        <ion-icon name="heart-outline"></ion-icon>
+                                    </button>
+
+                                    <button class="btn">Rent now</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="featured-car-card">
+
+                            <figure class="card-banner">
+                                <img src="assest/benz.jpg" alt="BMW 4 Series 2019" loading="lazy" width="440" height="300"
+                                     class="w-100">
+                            </figure>
+
+                            <div class="card-content">
+
+                                <div class="card-title-wrapper">
+                                    <h3 class="h3 card-title">
+                                        <a href="#">Benz s600</a>
+                                    </h3>
+
+                                    <data class="year" value="2019">2019</data>
+                                </div>
+
+                                <ul class="card-list">
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="people-outline"></ion-icon>
+
+                                        <span class="card-item-text">5 People</span>
+                                    </li>
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="flash-outline"></ion-icon>
+
+                                        <span class="card-item-text">Gasoline</span>
+                                    </li>
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="speedometer-outline"></ion-icon>
+
+                                        <span class="card-item-text">7.2km / 1-litre</span>
+                                    </li>
+
+                                    <li class="card-list-item">
+                                        <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                                        <span class="card-item-text">Automatic</span>
+                                    </li>
+
+                                </ul>
+
+                                <div class="card-price-wrapper">
+
+                                    <p class="card-price">
+                                        <strong>Rs 25000.00</strong> / Per Day
+                                    </p>
+
+                                    <button class="btn fav-btn" aria-label="Add to favourite list">
+                                        <ion-icon name="heart-outline"></ion-icon>
+                                    </button>
+
+                                    <button class="btn">Rent now</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </section>
+
+
+
+
+
+        <!--
+          - #GET START
+        -->
+
+        <section class="section get-start">
+            <div class="container">
+
+                <h2 class="h2 section-title">Get started with 4 simple steps</h2>
+
+                <ul class="get-start-list">
+
+                    <li>
+                        <div class="get-start-card">
+
+                            <div class="card-icon icon-1">
+                                <ion-icon name="person-add-outline"></ion-icon>
+                            </div>
+
+                            <h3 class="card-title">Create a profile</h3>
+
+                            <p class="card-text">
+                                If you are going to use a passage of Lorem Ipsum, you need to be sure.
+                            </p>
+
+                            <a href="CustomerRegisterform.html" class="card-link">Get started</a>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="get-start-card">
+
+                            <div class="card-icon icon-2">
+                                <ion-icon name="car-outline"></ion-icon>
+                            </div>
+
+                            <h3 class="card-title">Tell us what car you want</h3>
+
+                            <p class="card-text">
+                                Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                            </p>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="get-start-card">
+
+                            <div class="card-icon icon-3">
+                                <ion-icon name="person-outline"></ion-icon>
+                            </div>
+
+                            <h3 class="card-title">Match with seller</h3>
+
+                            <p class="card-text">
+                                It to make a type specimen book. It has survived not only five centuries, but also the leap into
+                                electronic
+                            </p>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="get-start-card">
+
+                            <div class="card-icon icon-4">
+                                <ion-icon name="card-outline"></ion-icon>
+                            </div>
+
+                            <h3 class="card-title">Make a deal</h3>
+
+                            <p class="card-text">
+                                There are many variations of passages of Lorem available, but the majority have suffered alteration
+                            </p>
+
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </section>
+
+
+
+    </article>
+</main>
+
+
+
+
+
+<!--
+  - #FOOTER
+-->
+
+<footer class="footer">
+    <div class="container">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <!--                    <img src="./assets/images/logo.svg" alt="Ridex logo">-->
+                </a>
+
+                <p class="footer-text">
+                    Search for cheap rental cars in New York. With a diverse fleet of 19,000 vehicles, Waydex offers its
+                    consumers an
+                    attractive and fun selection.
+                </p>
+            </div>
+
+            <ul class="footer-list">
+
+                <li>
+                    <p class="footer-list-title">Company</p>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">About us</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Pricing plans</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Our blog</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Contacts</a>
+                </li>
+
+            </ul>
+
+            <ul class="footer-list">
+
+                <li>
+                    <p class="footer-list-title">Support</p>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Help center</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Ask a question</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Privacy policy</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Terms & conditions</a>
+                </li>
+
+            </ul>
+
+            <ul class="footer-list">
+
+                <li>
+                    <p class="footer-list-title">Neighborhoods in New York</p>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Manhattan</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Central New York City</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Upper East Side</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Queens</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Theater District</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Midtown</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">SoHo</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Chelsea</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <ul class="social-list">
+
+                <li>
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-skype"></ion-icon>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="social-link">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </a>
+                </li>
+
+            </ul>
+
+            <p class="copyright">
+                &copy; 2023 <a href="#">Poorna Shakthi</a>. All Rights Reserved
+            </p>
+
+        </div>
+
+    </div>
+</footer>
+
+
+
+
+
+<!--
+  - custom js link
+-->
+<script src="../assets/css/js/script.js"></script>
+<script src="../assets/css/js/vendor.bundle.base.js"></script>
+<!-- endinject -->
+<!-- Plugin js for this page -->
+<script src="../assets/css/js/adminJS/select2.min.js"></script>
+<script src="../assets/css/js/adminJS/typeahead.bundle.min.js"></script>
+<!-- End plugin js for this page -->
+<!-- inject:js -->
+<script src="../assets/css/js/off-canvas.js"></script>
+<script src="../assets/css/js/hoverable-collapse.js"></script>
+<script src="../assets/css/js/misc.js"></script>
+<script src="../assets/css/js/settings.js"></script>
+<script src="../assets/css/js/todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page -->
+<script src="../assets/css/js/adminJS/file-upload.js"></script>
+<script src="../assets/css/js/adminJS/typeahead.js"></script>
+<script src="../assets/css/js/adminJS/select2.js"></script>
+<!-- End custom js for this page -->
+<!--
+  - ionicon link
+-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
