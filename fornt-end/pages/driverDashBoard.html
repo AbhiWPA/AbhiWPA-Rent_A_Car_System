@@ -34,16 +34,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
           rel="stylesheet">
+
+
+    <!-- Libraries Stylesheet -->
+    <link href="../assets/css/customerStyles/owl.carousel.min.css" rel="stylesheet">
+    <link href="../assets/css/customerStyles/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../assets/css/frameWork/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../assets/css/customerStyles/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-color: black">
 
 <!--
   - #HEADER
 -->
 
-<header class="header" data-header style="background-color: black; color: white;">
-    <div class="container" >
+<header class="header" data-header style="background-color: black; color: white; margin-bottom: 100px;">
+    <div class="container" style="">
 
         <div class="overlay" data-overlay></div>
 
@@ -131,10 +142,139 @@
 
 
 
-<main style="background-color: black">
-    <article>
+<main style="background-color: black; margin-top: 100px;">
+    <article  >
+
+        <div class="row">
+            <div class="col-9 grid-margin" style="margin-left: 10%;">
+                <div class="card" style="background-color: #1c1c1f;">
+                    <div class="card-body">
+                        <h4 class="card-title"></h4>
+                        <div class="table-responsive" style="max-height: 500px;">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th style="color: #b60000;"> No </th>
+                                    <th style="color: #b60000;"> Start Time </th>
+                                    <th style="color: #b60000;"> Date </th>
+                                    <th style="color: #b60000;"> Duration </th>
+                                    <th style="color: #b60000;"> Vehicle Details </th>
+                                </tr>
+                                </thead>
+                                <tbody class="text-white">
+                                <tr>
+                                    <td>001</td>
+                                    <td>Saman</td>
+                                    <td> R001 </td>
+                                    <td> Prius </td>
+                                    <td> 23/01/2023 </td>
+                                </tr>
+                                <tr>
+                                    <td>002</td>
+                                    <td>Amal</td>
+                                    <td> R002 </td>
+                                    <td> Defender </td>
+                                    <td> 23/01/2023 </td>
+                                </tr>
+                                <tr>
+                                    <td>003</td>
+                                    <td>Nimal</td>
+                                    <td> R003 </td>
+                                    <td> Aqua </td>
+                                    <td> 23/01/2023 </td>
+                                </tr>
+                                <tr>
+                                    <td>004</td>
+                                    <td>Kamal</td>
+                                    <td> R004 </td>
+                                    <td> Fit </td>
+                                    <td> 24/01/2023 </td>
+                                </tr>
+                                <tr>
+                                    <td>005</td>
+                                    <td>Vimal</td>
+                                    <td> R005 </td>
+                                    <td> Premio </td>
+                                    <td> 24/01/2023 </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row"  style="margin-left: 10%;">
+            <div class="col-sm-11 col-md-5 col-xl-3 mx-lg-5 ms-lg-5 text-white" style="margin-left: 25%;">
+                <div class="h-100 bg-black rounded p-4" style="box-shadow: 0px -1px 10px 8px rgb(255, 255, 255, 0.89);">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h6 class="mb-0">Calender</h6>
+                        <a href="" style="color: #9c0303; text-decoration: none; font-weight: 600;">Show All</a>
+                    </div>
+                    <div id="calender"></div>
+                </div>
+            </div>
 
 
+            <div class="col-sm-12 col-md-8 col-xl-5">
+                <div class="h-100 bg-dark rounded p-4" style="box-shadow: 0px -1px 10px 8px rgb(255, 255, 255, 0.89);">
+                    <div class="d-flex align-items-center justify-content-between mb-4" style="color: #9c0303; text-decoration: none; font-weight: 600;">
+                        <h6 class="mb-0">To Do List</h6>
+                        <a href="">Show All</a>
+                    </div>
+                    <div class="d-flex mb-2">
+                        <input class="form-control bg-transparent" type="text" placeholder="Enter task">
+                        <button type="button" class="btn btn-primary ms-2">Add</button>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom py-2 text-white">
+                        <input class="form-check-input m-0" type="checkbox">
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <span>Short task goes here...</span>
+                                <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom py-2 text-white">
+                        <input class="form-check-input m-0" type="checkbox">
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <span>Short task goes here...</span>
+                                <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom py-2 text-white">
+                        <input class="form-check-input m-0" type="checkbox" checked>
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <span><del>Short task goes here...</del></span>
+                                <button class="btn btn-sm text-primary"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom py-2 text-white">
+                        <input class="form-check-input m-0" type="checkbox">
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <span>Short task goes here...</span>
+                                <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center pt-2 text-white">
+                        <input class="form-check-input m-0" type="checkbox">
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <span>Short task goes here...</span>
+                                <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -332,6 +472,18 @@
 <!--
   - ionicon link
 -->
+
+<script src="../assets/css/customerStyles/js/chart.min.js"></script>
+<script src="../assets/css/customerStyles/js/easing.min.js"></script>
+<script src="../assets/css/customerStyles/js/waypoints.min.js"></script>
+<script src="../assets/css/customerStyles/js/owl.carousel.min.js"></script>
+<script src="../assets/css/customerStyles/js/moment.min.js"></script>
+<script src="../assets/css/customerStyles/js/moment-timezone.min.js"></script>
+<script src="../assets/css/customerStyles/js/tempusdominus-bootstrap-4.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="../assets/css/customerStyles/js/main.js"></script>
+
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
