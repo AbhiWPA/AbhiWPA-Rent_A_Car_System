@@ -29,23 +29,23 @@
             <img src="../assets/img/user.png" class="head-icon">
             <h1><b>Sign Up Now</b></h1>
             <hr>
-            <input type="text" class="input-box" placeholder="   Driver Name"><br>
-            <input type="email" class="input-box" placeholder="   E mail"><br>
-            <input type="password" class="input-box" placeholder="   Password"><br>
-            <input type="password" class="input-box" placeholder="   Contact"><br>
-            <input type="password" class="input-box" placeholder="   Address"><br>
-            <input type="password" class="input-box" placeholder="   Age"><br>
+            <input type="text" class="input-box" placeholder="   Driver Name" id="txtDriverName"><br>
+            <input type="email" class="input-box" placeholder="   E mail" id="txtDriverMail"><br>
+            <input type="password" class="input-box" placeholder="   Password" id="txtDriverPassword"><br>
+            <input type="tel" class="input-box" placeholder="   Contact" id="txtDriverContact"><br>
+            <input type="text" class="input-box" placeholder="   Address" id="txtDriverAddress"><br>
+            <input type="number" class="input-box" placeholder="   Age" id="txtDriverAge"><br>
 
             <div class="small mt-2 text-white">Upload your NIC or any other relevant file. Max file
                 size 50 MB</div>
-            <input class="form-control text-black" id="nic" type="file" />
+            <input class="form-control text-black" id="driverNIC" type="file" />
 
             <div class="small mt-2 text-white">Upload your Driving Licence or any other relevant file. Max file
                 size 50 MB</div>
-            <input class="form-control text-black" id="formFileLg" type="file" />
+            <input class="form-control text-black" id="driverLicenceDetails" type="file" />
 
             <p1 style="color: white;"><span><input type="checkbox"> I Agree to the <a href="#">Terms and Conditions</a></span></p1><br><br>
-            <a type="button" class="btn btn-primary btnSignUp" target="_parent" type="submit">Sign Up</a><br><br>
+            <a type="button" class="btn btn-primary btnSignUp" target="_parent" type="submit" id="btnDriverSignUp">Sign Up</a><br><br>
             <p class="or text-white"> OR </p>
             <br><br>
 
@@ -86,5 +86,6 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
 <script type="text/javascript" src="../assets/css/js/bootstrap.min.js"></script>
+<script src="../assets/js/signUp.js"></script>
 </body>
 </html>
