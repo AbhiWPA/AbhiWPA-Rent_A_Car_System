@@ -11,6 +11,7 @@ public class CustomerDTO {
     private String name;
     private String pswd;
     private String mail;
+    private String address;
     private String contact;
     private String nic;
     private String licence;
@@ -45,6 +46,14 @@ public class CustomerDTO {
 
     public void setMail(String mail) {
         this.mail = mail;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getContact() {

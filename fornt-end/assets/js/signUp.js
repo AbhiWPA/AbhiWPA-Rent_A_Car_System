@@ -33,6 +33,7 @@ function saveCustomer(){
     let name = $("#txtCustomerName").val();
     let pswd = $("#txtCustomerPassword").val();
     let mail = $("#txtCustomerMail").val();
+    let address = $("#txtCustomerAddress").val();
     let contact = $("#txtCustomerContact").val();
     let nic = $("#NIC").val();
     let licence = $("#licence").val();
@@ -42,6 +43,7 @@ function saveCustomer(){
         name : name,
         pswd : pswd,
         mail : mail,
+        address : address,
         contact : contact,
         nic : nic,
         licence : licence

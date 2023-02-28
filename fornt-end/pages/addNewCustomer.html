@@ -795,9 +795,10 @@
               <div class="col-12 grid-margin">
                 <div class="card" style="border: 1px solid #a11e1e;">
                   <div class="card-body">
+                    <button class="btn btn-success mdi-format-align-right" id="btnCustomerApprove" style="margin-left: 85%;">Approve All</button>
                     <h4 class="card-title"></h4>
                     <div class="table-responsive" style="max-height: 500px;">
-                      <table class="table">
+                      <table class="table" id="adminCustomerTable">
                         <thead>
                         <tr>
                           <th> No </th>
@@ -805,77 +806,12 @@
                           <th> Name </th>
                           <th> E-mail </th>
                           <th> Address </th>
+                          <th> Contact </th>
                           <th> NIC </th>
-                          <th> Requested Date </th>
-                          <th> Approve/Not </th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                          <td>001</td>
-                          <td>Saman</td>
-                          <td> R001 </td>
-                          <td> Prius </td>
-                          <td> 23/01/2023 </td>
-                          <td> 26/01/2023 </td>
-                          <td> ----- </td>
-                          <td>
-                            <button class="btn btn-sm btn-outline-success">Approved</button>
-                            <button class="btn btn-sm btn-outline-danger">Delete</button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>002</td>
-                          <td>Amal</td>
-                          <td> R002 </td>
-                          <td> Defender </td>
-                          <td> 23/01/2023 </td>
-                          <td> 24/01/2023 </td>
-                          <td> ----- </td>
-                          <td>
-                            <button class="btn btn-sm btn-outline-success">Approved</button>
-                            <button class="btn btn-sm btn-outline-danger">Delete</button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>003</td>
-                          <td>Nimal</td>
-                          <td> R003 </td>
-                          <td> Aqua </td>
-                          <td> 23/01/2023 </td>
-                          <td> 25/01/2023 </td>
-                          <td> ----- </td>
-                          <td>
-                            <button class="btn btn-sm btn-outline-success">Approved</button>
-                            <button class="btn btn-sm btn-outline-danger">Delete</button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>004</td>
-                          <td>Kamal</td>
-                          <td> R004 </td>
-                          <td> Fit </td>
-                          <td> 24/01/2023 </td>
-                          <td> 26/01/2023 </td>
-                          <td> ----- </td>
-                          <td>
-                            <button class="btn btn-sm btn-outline-success">Approved</button>
-                            <button class="btn btn-sm btn-outline-danger">Delete</button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>005</td>
-                          <td>Vimal</td>
-                          <td> R005 </td>
-                          <td> Premio </td>
-                          <td> 24/01/2023 </td>
-                          <td> 26/01/2023 </td>
-                          <td> ----- </td>
-                          <td>
-                            <button class="btn btn-sm btn-outline-success">Approved</button>
-                            <button class="btn btn-sm btn-outline-danger">Delete</button>
-                          </td>
-                        </tr>
+
                         </tbody>
                       </table>
                     </div>
@@ -972,6 +908,8 @@
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
+    <script src="../assets/css/js/jquery-3.6.1.min.js"></script>
+    <script src="../assets/js/adminCustomerManage.js"></script>
     <script src="../assets/css/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
