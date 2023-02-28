@@ -95,7 +95,7 @@ $("#btnDriverSignUp").click(function () {
 });
 
 function saveDriver() {
-    let driverId = dr+parseInt(lastDriverId)+1;
+    let driverId = parseInt(lastDriverId)+1;
     let driverName = $("#txtDriverName").val();
     let driverMail = $("#txtDriverMail").val();
     let driverPswd = $("#txtDriverPassword").val();
@@ -117,7 +117,7 @@ function saveDriver() {
         licence : driverLicence
     }
 
-    console.log(customer);
+    console.log(driver);
 
     $.ajax({
         url: baseUrl+'customer',

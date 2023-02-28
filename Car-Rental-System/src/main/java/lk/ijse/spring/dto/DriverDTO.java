@@ -10,7 +10,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class DriverDTO {
-    private String id;
+    private int id;
     private String name;
     private String mail;
     private String pswd;
@@ -20,11 +20,11 @@ public class DriverDTO {
     private String nic;
     private String licence;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
