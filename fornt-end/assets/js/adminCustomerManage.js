@@ -65,9 +65,11 @@ function customerApproval() {
             },
             error:function (error) {
                 let cause =  JSON.parse(error.responseText).message;
-                alert(cause);
+
             }
         })
 
     }
+
+    $("#adminCustomerTable").empty();
 }
