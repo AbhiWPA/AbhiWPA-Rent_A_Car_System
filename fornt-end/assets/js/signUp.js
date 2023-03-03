@@ -29,6 +29,7 @@ $("#btnSignIn").click(function(){
 });
 
 function saveCustomer(){
+    console.log("save customer");
     let cusId = parseInt(lastId)+1;
     let name = $("#txtCustomerName").val();
     let pswd = $("#txtCustomerPassword").val();
@@ -37,6 +38,8 @@ function saveCustomer(){
     let contact = $("#txtCustomerContact").val();
     let nic = $("#NIC").val();
     let licence = $("#licence").val();
+
+    alert(pswd);
 
     var customer = {
         id : cusId,
