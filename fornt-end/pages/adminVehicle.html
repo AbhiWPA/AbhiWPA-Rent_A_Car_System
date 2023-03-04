@@ -234,7 +234,7 @@
                     </nav>
                 </div>
 
-                <div style="max-height: 500px; overflow: scroll; overflow-x: hidden;">
+                <div id="carsDiv" style="max-height: 500px; overflow: scroll; overflow-x: hidden;">
                     <div class="card" style="max-width: 1000px; max-height: 250px; background: linear-gradient(rgba(245,98,41,0.8), rgba(252,167,34,0.7)); margin-bottom: 10px;">
                         <div class="row g-0">
                             <div class="col-4" style="max-height: 250px;">
@@ -395,13 +395,18 @@
                         </div>
                         <div class="modal-body bg-dark">
                             <section class="text-white">
+
                                 <div class="mb-3">
-                                    <label class="form-label text-white" for="txtVehicleID">Vehicle ID</label>
-                                    <input class="form-control" id="txtVehicleID" type="text">
+                                    <label for="inputVehicleId" class="form-label fw-bold text-white">Vehicle ID</label>
+                                    <select id="inputVehicleId" class="form-select text-black">
+                                        <option selected id="comboVehicleID">Choose...</option>
+                                        <option>...</option>
+                                    </select>
                                 </div>
+
                                 <div class="mb-3 shadow-none">
-                                    <label class="form-label text-white" for="txtVehicleNumber">Brand</label>
-                                    <input class="form-control" id="txtVehicleNumber" multiple type="text">
+                                    <label class="form-label text-white" for="txtVehicleBrand">Brand</label>
+                                    <input class="form-control" id="txtVehicleBrand" multiple type="text">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label text-white" for="txtVehicleModel">Model</label>
@@ -419,55 +424,55 @@
                                     <input class="form-control" id="txtMileage" type="text">
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label text-white" for="txtPrice">Nmber Of Passengers</label>
-                                    <input class="form-control" id="txtPrice" type="text">
+                                    <label class="form-label text-white" for="txtPassengers">Nmber Of Passengers</label>
+                                    <input class="form-control" id="txtPassengers" type="number">
 <!--                                    <p>250km for 24 hours...!</p>-->
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="form-label text-white" for="txtPrice">Monthly Rate</label>
+                                    <label class="form-label text-white" for="txtMonthlyRate">Monthly Rate</label>
                                     <input class="form-control" id="txtMonthlyRate" type="text">
                                     <!--                                    <p>250km for 24 hours...!</p>-->
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="form-label text-white" for="txtPrice">Daily Rate</label>
+                                    <label class="form-label text-white" for="txtDailyRate">Daily Rate</label>
                                     <input class="form-control" id="txtDailyRate" type="text">
                                     <!--                                    <p>250km for 24 hours...!</p>-->
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="form-label text-white" for="txtPrice">Free Milage</label>
-                                    <input class="form-control" id="txtFreeMilage" type="text">
+                                    <label class="form-label text-white" for="txtFreeMileage">Free Mileage</label>
+                                    <input class="form-control" id="txtFreeMileage" type="text">
                                     <!--                                    <p>250km for 24 hours...!</p>-->
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="form-label text-white" for="txtPrice">Price Of Extra KM</label>
+                                    <label class="form-label text-white" for="txtExtraPrice">Price Of Extra KM</label>
                                     <input class="form-control" id="txtExtraPrice" type="text">
                                     <!--                                    <p>250km for 24 hours...!</p>-->
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="form-label text-white" for="txtPrice">Registration NUmber</label>
+                                    <label class="form-label text-white" for="txtRegistrationNumber">Registration NUmber</label>
                                     <input class="form-control" id="txtRegistrationNumber" type="text">
                                     <!--                                    <p>250km for 24 hours...!</p>-->
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="form-label text-white" for="txtPrice">Last Service Milage</label>
+                                    <label class="form-label text-white" for="txtServiceMilage">Last Service Milage</label>
                                     <input class="form-control" id="txtServiceMilage" type="text">
                                     <!--                                    <p>250km for 24 hours...!</p>-->
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="form-label text-white" for="txtPrice">Color</label>
+                                    <label class="form-label text-white" for="txtColor">Color</label>
                                     <input class="form-control" id="txtColor" type="color">
                                     <!--                                    <p>250km for 24 hours...!</p>-->
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="form-label text-white" for="txtPrice">Upload Car Picture</label>
+                                    <label class="form-label text-white" for="carPicture">Upload Car Picture</label>
                                     <input class="form-control" id="carPicture" type="file">
                                     <!--                                    <p>250km for 24 hours...!</p>-->
                                 </div>
@@ -478,9 +483,9 @@
 
                         </div>
                         <div class="modal-footer bg-dark">
-                            <button class="btn btn-outline-success" data-bs-dismiss="modal" type="button">Save Vehicle</button>
-                            <button class="btn btn-outline-warning" data-bs-dismiss="modal" type="button">Update Details</button>
-                            <button class="btn btn-outline-danger" data-bs-dismiss="modal" type="button">Delete Vehicle</button>
+                            <button id="btnSaveVehicle" class="btn btn-outline-success" data-bs-dismiss="modal" type="button">Save Vehicle</button>
+                            <button id="btnUpdateVehicle" class="btn btn-outline-warning" data-bs-dismiss="modal" type="button">Update Details</button>
+                            <button id="btnDeleteVehicle" class="btn btn-outline-danger" data-bs-dismiss="modal" type="button">Delete Vehicle</button>
                         </div>
                     </div>
                 </div>
@@ -520,6 +525,7 @@
 <script src="../assets/css/js/adminJS/select2.js"></script>
 <!-- End custom js for this page -->
 <script src="../assets/css/js/bootstrap.min.js"></script>
+<script src="../assets/js/adminVehicle.js"></script>
 <!-- MDB -->
 <script
         type="text/javascript"

@@ -3,7 +3,6 @@ let baseUrl = "http://localhost:8080/Car_Rental_System_war_exploded/";
 
 
 let lastDriverId;
-let dr = "D00";
 driverIdGen();
 
 function driverIdGen(){
