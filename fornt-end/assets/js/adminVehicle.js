@@ -1,6 +1,7 @@
 let baseUrl = "http://localhost:8080/Car_Rental_System_war_exploded/";
-
+//
 let lastVehicleId;
+let availableVehicles = [];
 vehicleIdGen();
 loadAllVehicles();
 
@@ -21,8 +22,11 @@ function vehicleIdGen(){
     });
 }
 
+
 $("#btnSaveVehicle").click(function () {
     saveVehicle();
+
+    location. reload();
 });
 
 function saveVehicle() {
@@ -58,27 +62,37 @@ function saveVehicle() {
         image : image
     }
 
-    console.log(Vehicle);
-
     $.ajax({
-        url: baseUrl+'vehicle',
+        url: baseUrl + 'vehicle',
         method: 'post',
-        contentType:"application/json",
-        data:JSON.stringify(Vehicle),
-        dataType:"json",
+        contentType: "application/json",
+        data: JSON.stringify(Vehicle),
+        dataType: "json",
         success: function (res) {
             alert(res.message);
         },
-        error:function (error){
-            let cause= JSON.parse(error.responseText).message;
+        error: function (error) {
+            let cause = JSON.parse(error.responseText).message;
             alert(cause);
         }
-
     });
+
 }
 
 function loadAllVehicles() {
-    $("#carsDiv").empty();
+    $.ajax({
+        url: baseUrl+"vehicle",
+        method: 'get',
+        dataType: "json",
+        success: function (resp) {
+            console.log(resp);
+            for (let v of resp.data) {
+                availableVehicles.push(v);
 
-    var car = '<div class="card" style="max-width: 1000px; max-height: 250px; background: linear-gradient(rgba(245,98,41,0.8), rgba(252,167,34,0.7)); margin-bottom: 10px;"></div>';
+                var row = '<tr><td>' + v.id + '</td><td>' + v.brand+" "+ v.model + '</td><td>' + v.registerNumber + '</td><td>' + v.mileage + '</td><td>' + v.color + '</td><td>' + v.monthlyRate + '</td><td>' + v.dailyRate + '</td></tr>';
+                $("#tblVehicle").append(row);
+            }
+        }
+
+    });
 }
