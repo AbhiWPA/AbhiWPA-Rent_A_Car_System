@@ -14,6 +14,7 @@ public class VehicleDTO {
     private String brand;
     private String model;
     private String fuel;
+    private String vehicleType;
     private String mileage;
     private int passengers;
     private String monthlyRate;
@@ -55,6 +56,14 @@ public class VehicleDTO {
 
     public void setFuel(String fuel) {
         this.fuel = fuel;
+    }
+
+    public String getVehicleType() {
+        return vehicleType;
+    }
+
+    public void setVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
     }
 
     public String getMileage() {

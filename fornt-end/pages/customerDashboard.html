@@ -27,6 +27,7 @@
     <!-- endinject -->
     <!-- Layout styles -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/frameWork/bootstrap.min.css">
     <!--
       - google font link
     -->
@@ -151,10 +152,119 @@
                     </p>
                 </div>
 
+                <button id="btnReservation" class="btn btn-lg text-white btn-outline-warning" data-bs-target="#mdlReservation" data-bs-toggle="modal"><h3>Reserve A Car Here</h3></button>
+
                 <div class="hero-banner" style="background: url('../assets/img/cars2.jpg') no-repeat; background-size: cover"></div>
 
             </div>
         </section>
+
+
+        <div aria-hidden="true" aria-labelledby="mdlReservation" class="modal fade" id="mdlReservation" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark">
+                        <h5 class="modal-title text-danger">Reserve a Vehicle</h5>
+                        <button aria-label="Close" class="btn-close bg-danger" data-bs-dismiss="modal" type="button"></button>
+                    </div>
+                    <div class="modal-body bg-dark">
+                        <section class="text-white">
+
+                            <div class="mb-3">
+                                <label for="inputVehicleId" class="form-label fw-bold text-white">Vehicle ID</label>
+                                <select id="inputVehicleId" class="form-select text-black">
+                                    <option selected id="comboVehicleID">Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3 shadow-none">
+                                <label class="form-label text-white" for="txtVehicleBrand">Brand</label>
+                                <input class="form-control" id="txtVehicleBrand" multiple type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-white" for="txtVehicleModel">Model</label>
+                                <input class="form-control" id="txtVehicleModel" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-white" for="cmbFuelType">Fuel type</label>
+                                <select id="cmbFuelType" name="id" class="form-select">
+                                    <option value="1" selected>Desel</option>
+                                    <option value="1" selected>Petrol</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-white" for="txtMileage">Mileage</label>
+                                <input class="form-control" id="txtMileage" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-white" for="txtPassengers">Nmber Of Passengers</label>
+                                <input class="form-control" id="txtPassengers" type="number">
+                                <!--                                    <p>250km for 24 hours...!</p>-->
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-white" for="txtMonthlyRate">Monthly Rate</label>
+                                <input class="form-control" id="txtMonthlyRate" type="text">
+                                <!--                                    <p>250km for 24 hours...!</p>-->
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-white" for="txtDailyRate">Daily Rate</label>
+                                <input class="form-control" id="txtDailyRate" type="text">
+                                <!--                                    <p>250km for 24 hours...!</p>-->
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-white" for="txtFreeMileage">Free Mileage</label>
+                                <input class="form-control" id="txtFreeMileage" type="text">
+                                <!--                                    <p>250km for 24 hours...!</p>-->
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-white" for="txtExtraPrice">Price Of Extra KM</label>
+                                <input class="form-control" id="txtExtraPrice" type="text">
+                                <!--                                    <p>250km for 24 hours...!</p>-->
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-white" for="txtRegistrationNumber">Registration NUmber</label>
+                                <input class="form-control" id="txtRegistrationNumber" type="text">
+                                <!--                                    <p>250km for 24 hours...!</p>-->
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-white" for="txtServiceMilage">Last Service Milage</label>
+                                <input class="form-control" id="txtServiceMilage" type="text">
+                                <!--                                    <p>250km for 24 hours...!</p>-->
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-white" for="txtColor">Color</label>
+                                <input class="form-control" id="txtColor" type="color">
+                                <!--                                    <p>250km for 24 hours...!</p>-->
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-white" for="carPicture">Upload Car Picture</label>
+                                <input class="form-control" id="carPicture" type="file">
+                                <!--                                    <p>250km for 24 hours...!</p>-->
+                            </div>
+
+                        </section>
+
+
+
+                    </div>
+                    <div class="modal-footer bg-dark">
+                        <button id="btnSaveVehicle" class="btn btn-outline-success" data-bs-dismiss="modal" type="button">Save Vehicle</button>
+                        <button id="btnUpdateVehicle" class="btn btn-outline-warning" data-bs-dismiss="modal" type="button">Update Details</button>
+                        <button id="btnDeleteVehicle" class="btn btn-outline-danger" data-bs-dismiss="modal" type="button">Delete Vehicle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 
 
@@ -177,397 +287,8 @@
                     </a>
                 </div>
 
-                <ul class="featured-car-list">
+                <ul class="featured-car-list" id="availableCars">
 
-                    <li>
-                        <div class="featured-car-card" style="background-color: #1c1c1f!important;">
-
-                            <figure class="card-banner" >
-                                <img src="../assets/img/cars/alto.jpg" alt="Suzuki Alto" loading="lazy" width="440" height="300"
-                                     class="w-100">
-                            </figure>
-
-                            <div class="card-content" style="background-color: #1c1c1f;">
-
-                                <div class="card-title-wrapper" >
-                                    <h3 class="h3 card-title">
-                                        <a href="#">Suzuki Alto</a>
-                                    </h3>
-
-                                    <data class="year" value="2021">2021</data>
-                                </div>
-
-                                <ul class="card-list">
-
-                                    <li class="card-list-item" style="background-color: #1c1c1f;">
-                                        <ion-icon name="people-outline"></ion-icon>
-
-                                        <span class="card-item-text">4 People</span>
-                                    </li>
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="flash-outline"></ion-icon>
-
-                                        <span class="card-item-text">Gasoline</span>
-                                    </li>
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="speedometer-outline"></ion-icon>
-
-                                        <span class="card-item-text">18km / 1-litre</span>
-                                    </li>
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="hardware-chip-outline"></ion-icon>
-
-                                        <span class="card-item-text">Manual</span>
-                                    </li>
-
-                                </ul>
-
-                                <div class="card-price-wrapper">
-
-                                    <p class="card-price">
-                                        <strong>Rs 5000.00</strong> / Per Day
-                                    </p>
-
-                                    <button class="btn fav-btn" aria-label="Add to favourite list">
-                                        <ion-icon name="heart-outline"></ion-icon>
-                                    </button>
-
-                                    <button class="btn">Rent now</button>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="featured-car-card" style="background-color: #1c1c1f!important;">
-
-                            <figure class="card-banner">
-                                <img src="../assets/img/cars/wagonR.webp" alt="Suzuki Wagon R" loading="lazy" width="440" height="300"
-                                     class="w-100">
-                            </figure>
-
-                            <div class="card-content" style="background-color: #1c1c1f;">
-
-                                <div class="card-title-wrapper">
-                                    <h3 class="h3 card-title">
-                                        <a href="#">Suzuki Wagon R</a>
-                                    </h3>
-
-                                    <data class="year" value="2019">2019</data>
-                                </div>
-
-                                <ul class="card-list">
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="people-outline"></ion-icon>
-
-                                        <span class="card-item-text">4 People</span>
-                                    </li>
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="flash-outline"></ion-icon>
-
-                                        <span class="card-item-text">Semi Hybrid</span>
-                                    </li>
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="speedometer-outline"></ion-icon>
-
-                                        <span class="card-item-text">20km / 1-litre</span>
-                                    </li>
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="hardware-chip-outline"></ion-icon>
-
-                                        <span class="card-item-text">Automatic</span>
-                                    </li>
-
-                                </ul>
-
-                                <div class="card-price-wrapper">
-
-                                    <p class="card-price">
-                                        <strong>Rs 7000.00</strong> / Per Day
-                                    </p>
-
-                                    <button class="btn fav-btn" aria-label="Add to favourite list">
-                                        <ion-icon name="heart-outline"></ion-icon>
-                                    </button>
-
-                                    <button class="btn">Rent now</button>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="featured-car-card" style="background-color: #1c1c1f!important;">
-
-                            <figure class="card-banner">
-                                <img src="../assets/img/cars/toyotaAqua.jpg" alt="Toyota Aqua" loading="lazy" width="440"
-                                     height="300" class="w-100">
-                            </figure>
-
-                            <div class="card-content" style="background-color: #1c1c1f;">
-
-                                <div class="card-title-wrapper">
-                                    <h3 class="h3 card-title">
-                                        <a href="#">Toyota Aqua</a>
-                                    </h3>
-
-                                    <data class="year" value="2020">2020</data>
-                                </div>
-
-                                <ul class="card-list">
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="people-outline"></ion-icon>
-
-                                        <span class="card-item-text">4 People</span>
-                                    </li>
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="flash-outline"></ion-icon>
-
-                                        <span class="card-item-text">Hybrid</span>
-                                    </li>
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="speedometer-outline"></ion-icon>
-
-                                        <span class="card-item-text">25Km / 1-litre</span>
-                                    </li>
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="hardware-chip-outline"></ion-icon>
-
-                                        <span class="card-item-text">Automatic</span>
-                                    </li>
-
-                                </ul>
-
-                                <div class="card-price-wrapper">
-
-                                    <p class="card-price">
-                                        <strong>Rs 10000.00</strong> / Per Day
-                                    </p>
-
-                                    <button class="btn fav-btn" aria-label="Add to favourite list">
-                                        <ion-icon name="heart-outline"></ion-icon>
-                                    </button>
-
-                                    <button class="btn">Rent now</button>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="featured-car-card" style="background-color: #1c1c1f!important;">
-
-                            <figure class="card-banner">
-                                <img src="../assets/img/cars/toyotaPrius.jpg" alt="Toyota Prius" loading="lazy" width="440"
-                                     height="300" class="w-100">
-                            </figure>
-
-                            <div class="card-content" style="background-color: #1c1c1f;">
-
-                                <div class="card-title-wrapper">
-                                    <h3 class="h3 card-title">
-                                        <a href="#">Toyota Prius</a>
-                                    </h3>
-
-                                    <data class="year" value="2020">2020</data>
-                                </div>
-
-                                <ul class="card-list">
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="people-outline"></ion-icon>
-
-                                        <span class="card-item-text">4 People</span>
-                                    </li>
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="flash-outline"></ion-icon>
-
-                                        <span class="card-item-text">Hybrid</span>
-                                    </li>
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="speedometer-outline"></ion-icon>
-
-                                        <span class="card-item-text">20Km / 1-litre</span>
-                                    </li>
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="hardware-chip-outline"></ion-icon>
-
-                                        <span class="card-item-text">Automatic</span>
-                                    </li>
-
-                                </ul>
-
-                                <div class="card-price-wrapper">
-
-                                    <p class="card-price">
-                                        <strong>rs 12000.00</strong> / Per Day
-                                    </p>
-
-                                    <button class="btn fav-btn" aria-label="Add to favourite list">
-                                        <ion-icon name="heart-outline"></ion-icon>
-                                    </button>
-
-                                    <button class="btn">Rent now</button>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="featured-car-card" style="background-color: #1c1c1f!important;">
-
-                            <figure class="card-banner">
-                                <img src="../assets/img/cars/bmw4GTI.jpg" alt="BMW 4 Series GTI 2021" loading="lazy" width="440"
-                                     height="300" class="w-100">
-                            </figure>
-
-                            <div class="card-content" style="background-color: #1c1c1f;">
-
-                                <div class="card-title-wrapper">
-                                    <h3 class="h3 card-title">
-                                        <a href="#">BMW 4 Series GTI</a>
-                                    </h3>
-
-                                    <data class="year" value="2021">2021</data>
-                                </div>
-
-                                <ul class="card-list">
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="people-outline"></ion-icon>
-
-                                        <span class="card-item-text">5 People</span>
-                                    </li>
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="flash-outline"></ion-icon>
-
-                                        <span class="card-item-text">Gasoline</span>
-                                    </li>
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="speedometer-outline"></ion-icon>
-
-                                        <span class="card-item-text">7.6km / 1-litre</span>
-                                    </li>
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="hardware-chip-outline"></ion-icon>
-
-                                        <span class="card-item-text">Automatic</span>
-                                    </li>
-
-                                </ul>
-
-                                <div class="card-price-wrapper">
-
-                                    <p class="card-price">
-                                        <strong>Rs 20000.00</strong> / Per Day
-                                    </p>
-
-                                    <button class="btn fav-btn" aria-label="Add to favourite list">
-                                        <ion-icon name="heart-outline"></ion-icon>
-                                    </button>
-
-                                    <button class="btn">Rent now</button>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="featured-car-card" style="background-color: #1c1c1f!important;">
-
-                            <figure class="card-banner">
-                                <img src="../assets/img/cars/benzS600.webp" alt="BMW 4 Series 2019" loading="lazy" width="440" height="300"
-                                     class="w-100">
-                            </figure>
-
-                            <div class="card-content" style="background-color: #1c1c1f;">
-
-                                <div class="card-title-wrapper">
-                                    <h3 class="h3 card-title">
-                                        <a href="#">Benz s600</a>
-                                    </h3>
-
-                                    <data class="year" value="2019">2019</data>
-                                </div>
-
-                                <ul class="card-list">
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="people-outline"></ion-icon>
-
-                                        <span class="card-item-text">5 People</span>
-                                    </li>
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="flash-outline"></ion-icon>
-
-                                        <span class="card-item-text">Gasoline</span>
-                                    </li>
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="speedometer-outline"></ion-icon>
-
-                                        <span class="card-item-text">7.2km / 1-litre</span>
-                                    </li>
-
-                                    <li class="card-list-item">
-                                        <ion-icon name="hardware-chip-outline"></ion-icon>
-
-                                        <span class="card-item-text">Automatic</span>
-                                    </li>
-
-                                </ul>
-
-                                <div class="card-price-wrapper">
-
-                                    <p class="card-price">
-                                        <strong>Rs 25000.00</strong> / Per Day
-                                    </p>
-
-                                    <button class="btn fav-btn" aria-label="Add to favourite list">
-                                        <ion-icon name="heart-outline"></ion-icon>
-                                    </button>
-
-                                    <button class="btn">Rent now</button>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </li>
 
                 </ul>
 
@@ -748,8 +469,12 @@
 <!--
   - custom js link
 -->
-<script src="../assets/css/js/script.js"></script>
 <script src="../assets/css/js/jquery-3.6.1.min.js"></script>
+<script src="../assets/css/js/bootstrap.min.js"></script>
+<script src="../assets/js/customerDashboard.js"></script>
+<script src="../assets/css/js/script.js"></script>
+
+
 <script src="../assets/js/login.js"></script>
 <script src="../assets/css/js/vendor.bundle.base.js"></script>
 <!-- endinject -->

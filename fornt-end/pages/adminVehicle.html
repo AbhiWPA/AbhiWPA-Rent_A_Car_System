@@ -255,212 +255,123 @@
                         </table>
                     </div>
                  </div>
-
-<!--                <div class="d-inline-flex" style="gap: 220px; width: 100%; padding: 10px; background: linear-gradient(rgba(250,187,187,0.8), rgba(255,255,255,0.8))" >-->
-<!--                    <button class="btn btn-lg btn-outline-success">Add New Vehicle</button>-->
-<!--                    <button class="btn btn-lg btn-outline-primary">Update Vehicle Details</button>-->
-<!--                    <button class="btn btn-lg btn-outline-danger">Remove Vehicle</button>-->
-<!--                </div>-->
-<!--                <div class="row " >-->
-<!--                    <div class="col-12 grid-margin">-->
-<!--                        <div class="card" style="border: 1px solid #a11e1e;">-->
-<!--                            <div class="card-body">-->
-<!--                                <h4 class="card-title">Rental Status</h4>-->
-<!--                                <div class="table-responsive" style="max-height: 500px;">-->
-<!--                                    <table class="table">-->
-<!--                                        <thead>-->
-<!--                                        <tr>-->
-<!--                                            <th> No </th>-->
-<!--                                            <th> C-ID </th>-->
-<!--                                            <th> Name </th>-->
-<!--                                            <th> E-mail </th>-->
-<!--                                            <th> Address </th>-->
-<!--                                            <th> NIC </th>-->
-<!--                                            <th> Requested Date </th>-->
-<!--                                            <th> Approve/Not </th>-->
-<!--                                        </tr>-->
-<!--                                        </thead>-->
-<!--                                        <tbody>-->
-<!--                                        <tr>-->
-<!--                                            <td>001</td>-->
-<!--                                            <td>Saman</td>-->
-<!--                                            <td> R001 </td>-->
-<!--                                            <td> Prius </td>-->
-<!--                                            <td> 23/01/2023 </td>-->
-<!--                                            <td> 26/01/2023 </td>-->
-<!--                                            <td> -&#45;&#45;&#45;&#45; </td>-->
-<!--                                            <td>-->
-<!--                                                <button class="btn btn-sm btn-outline-success">Approved</button>-->
-<!--                                                <button class="btn btn-sm btn-outline-danger">Delete</button>-->
-<!--                                            </td>-->
-<!--                                        </tr>-->
-<!--                                        <tr>-->
-<!--                                            <td>002</td>-->
-<!--                                            <td>Amal</td>-->
-<!--                                            <td> R002 </td>-->
-<!--                                            <td> Defender </td>-->
-<!--                                            <td> 23/01/2023 </td>-->
-<!--                                            <td> 24/01/2023 </td>-->
-<!--                                            <td> -&#45;&#45;&#45;&#45; </td>-->
-<!--                                            <td>-->
-<!--                                                <button class="btn btn-sm btn-outline-success">Approved</button>-->
-<!--                                                <button class="btn btn-sm btn-outline-danger">Delete</button>-->
-<!--                                            </td>-->
-<!--                                        </tr>-->
-<!--                                        <tr>-->
-<!--                                            <td>003</td>-->
-<!--                                            <td>Nimal</td>-->
-<!--                                            <td> R003 </td>-->
-<!--                                            <td> Aqua </td>-->
-<!--                                            <td> 23/01/2023 </td>-->
-<!--                                            <td> 25/01/2023 </td>-->
-<!--                                            <td> -&#45;&#45;&#45;&#45; </td>-->
-<!--                                            <td>-->
-<!--                                                <button class="btn btn-sm btn-outline-success">Approved</button>-->
-<!--                                                <button class="btn btn-sm btn-outline-danger">Delete</button>-->
-<!--                                            </td>-->
-<!--                                        </tr>-->
-<!--                                        <tr>-->
-<!--                                            <td>004</td>-->
-<!--                                            <td>Kamal</td>-->
-<!--                                            <td> R004 </td>-->
-<!--                                            <td> Fit </td>-->
-<!--                                            <td> 24/01/2023 </td>-->
-<!--                                            <td> 26/01/2023 </td>-->
-<!--                                            <td> -&#45;&#45;&#45;&#45; </td>-->
-<!--                                            <td>-->
-<!--                                                <button class="btn btn-sm btn-outline-success">Approved</button>-->
-<!--                                                <button class="btn btn-sm btn-outline-danger">Delete</button>-->
-<!--                                            </td>-->
-<!--                                        </tr>-->
-<!--                                        <tr>-->
-<!--                                            <td>005</td>-->
-<!--                                            <td>Vimal</td>-->
-<!--                                            <td> R005 </td>-->
-<!--                                            <td> Premio </td>-->
-<!--                                            <td> 24/01/2023 </td>-->
-<!--                                            <td> 26/01/2023 </td>-->
-<!--                                            <td> -&#45;&#45;&#45;&#45; </td>-->
-<!--                                            <td>-->
-<!--                                                <button class="btn btn-sm btn-outline-success">Approved</button>-->
-<!--                                                <button class="btn btn-sm btn-outline-danger">Delete</button>-->
-<!--                                            </td>-->
-<!--                                        </tr>-->
-<!--                                        </tbody>-->
-<!--                                    </table>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
             </div>
             <!-- content-wrapper ends -->
 
             <!-- Modal -->
-            <div aria-hidden="true" aria-labelledby="saveCustomerLabel" class="modal fade" id="editVehicleDetails" tabindex="-1">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header bg-dark">
-                            <h5 class="modal-title text-danger">Edit Vehicle Details</h5>
-                            <button aria-label="Close" class="btn-close bg-danger" data-bs-dismiss="modal" type="button"></button>
-                        </div>
-                        <div class="modal-body bg-dark">
-                            <section class="text-white">
-
-                                <div class="mb-3">
-                                    <label for="inputVehicleId" class="form-label fw-bold text-white">Vehicle ID</label>
-                                    <select id="inputVehicleId" class="form-select text-black">
-                                        <option selected id="comboVehicleID">Choose...</option>
-                                        <option>...</option>
-                                    </select>
+                    <div aria-hidden="true" aria-labelledby="editVehicleDetails" class="modal fade" id="editVehicleDetails" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header bg-dark">
+                                    <h5 class="modal-title text-danger">Edit Vehicle Details</h5>
+                                    <button aria-label="Close" class="btn-close bg-danger" data-bs-dismiss="modal" type="button"></button>
                                 </div>
+                                <div class="modal-body bg-dark">
+                                    <section class="text-white">
 
-                                <div class="mb-3 shadow-none">
-                                    <label class="form-label text-white" for="txtVehicleBrand">Brand</label>
-                                    <input class="form-control" id="txtVehicleBrand" multiple type="text">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label text-white" for="txtVehicleModel">Model</label>
-                                    <input class="form-control" id="txtVehicleModel" type="text">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label text-white" for="cmbFuelType">Fuel type</label>
-                                    <select id="cmbFuelType" name="id" class="form-select">
-                                        <option value="1" selected>Desel</option>
-                                        <option value="1" selected>Petrol</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label text-white" for="txtMileage">Mileage</label>
-                                    <input class="form-control" id="txtMileage" type="text">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label text-white" for="txtPassengers">Nmber Of Passengers</label>
-                                    <input class="form-control" id="txtPassengers" type="number">
-<!--                                    <p>250km for 24 hours...!</p>-->
-                                </div>
+                                        <div class="mb-3">
+                                            <label for="inputVehicleId" class="form-label fw-bold text-white">Vehicle ID</label>
+                                            <select id="inputVehicleId" class="form-select text-black">
+                                                <option selected id="comboVehicleID">Choose...</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
 
-                                <div class="mb-3">
-                                    <label class="form-label text-white" for="txtMonthlyRate">Monthly Rate</label>
-                                    <input class="form-control" id="txtMonthlyRate" type="text">
-                                    <!--                                    <p>250km for 24 hours...!</p>-->
+                                        <div class="mb-3 shadow-none">
+                                            <label class="form-label text-white" for="txtVehicleBrand">Brand</label>
+                                            <input class="form-control" id="txtVehicleBrand" multiple type="text">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label text-white" for="txtVehicleModel">Model</label>
+                                            <input class="form-control" id="txtVehicleModel" type="text">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label text-white" for="cmbFuelType">Fuel type</label>
+                                            <select id="cmbFuelType" name="id" class="form-select">
+                                                <option value="1" selected>Desel</option>
+                                                <option value="1" selected>Petrol</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label text-white" for="cmbFuelType">Vehicle type</label>
+                                            <select id="cmbVehicleType" name="id" class="form-select">
+                                                <option value="1" selected>Manual</option>
+                                                <option value="1" selected>Auto</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label text-white" for="txtMileage">Mileage</label>
+                                            <input class="form-control" id="txtMileage" type="text">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label text-white" for="txtPassengers">Nmber Of Passengers</label>
+                                            <input class="form-control" id="txtPassengers" type="number">
+        <!--                                    <p>250km for 24 hours...!</p>-->
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label text-white" for="txtMonthlyRate">Monthly Rate</label>
+                                            <input class="form-control" id="txtMonthlyRate" type="text">
+                                            <!--                                    <p>250km for 24 hours...!</p>-->
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label text-white" for="txtDailyRate">Daily Rate</label>
+                                            <input class="form-control" id="txtDailyRate" type="text">
+                                            <!--                                    <p>250km for 24 hours...!</p>-->
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label text-white" for="txtFreeMileage">Free Mileage</label>
+                                            <input class="form-control" id="txtFreeMileage" type="text">
+                                            <!--                                    <p>250km for 24 hours...!</p>-->
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label text-white" for="txtExtraPrice">Price Of Extra KM</label>
+                                            <input class="form-control" id="txtExtraPrice" type="text">
+                                            <!--                                    <p>250km for 24 hours...!</p>-->
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label text-white" for="txtRegistrationNumber">Registration NUmber</label>
+                                            <input class="form-control" id="txtRegistrationNumber" type="text">
+                                            <!--                                    <p>250km for 24 hours...!</p>-->
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label text-white" for="txtServiceMilage">Last Service Milage</label>
+                                            <input class="form-control" id="txtServiceMilage" type="text">
+                                            <!--                                    <p>250km for 24 hours...!</p>-->
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label text-white" for="txtColor">Color</label>
+                                            <input class="form-control" id="txtColor" type="color">
+                                            <!--                                    <p>250km for 24 hours...!</p>-->
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label text-white" for="carPicture">Upload Car Picture</label>
+                                            <input class="form-control" id="carPicture" type="file">
+                                            <!--                                    <p>250km for 24 hours...!</p>-->
+                                        </div>
+
+                                    </section>
+
+
+
                                 </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label text-white" for="txtDailyRate">Daily Rate</label>
-                                    <input class="form-control" id="txtDailyRate" type="text">
-                                    <!--                                    <p>250km for 24 hours...!</p>-->
+                                <div class="modal-footer bg-dark">
+                                    <button id="btnSaveVehicle" class="btn btn-outline-success" data-bs-dismiss="modal" type="button">Save Vehicle</button>
+                                    <button id="btnUpdateVehicle" class="btn btn-outline-warning" data-bs-dismiss="modal" type="button">Update Details</button>
+                                    <button id="btnDeleteVehicle" class="btn btn-outline-danger" data-bs-dismiss="modal" type="button">Delete Vehicle</button>
                                 </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label text-white" for="txtFreeMileage">Free Mileage</label>
-                                    <input class="form-control" id="txtFreeMileage" type="text">
-                                    <!--                                    <p>250km for 24 hours...!</p>-->
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label text-white" for="txtExtraPrice">Price Of Extra KM</label>
-                                    <input class="form-control" id="txtExtraPrice" type="text">
-                                    <!--                                    <p>250km for 24 hours...!</p>-->
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label text-white" for="txtRegistrationNumber">Registration NUmber</label>
-                                    <input class="form-control" id="txtRegistrationNumber" type="text">
-                                    <!--                                    <p>250km for 24 hours...!</p>-->
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label text-white" for="txtServiceMilage">Last Service Milage</label>
-                                    <input class="form-control" id="txtServiceMilage" type="text">
-                                    <!--                                    <p>250km for 24 hours...!</p>-->
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label text-white" for="txtColor">Color</label>
-                                    <input class="form-control" id="txtColor" type="color">
-                                    <!--                                    <p>250km for 24 hours...!</p>-->
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label text-white" for="carPicture">Upload Car Picture</label>
-                                    <input class="form-control" id="carPicture" type="file">
-                                    <!--                                    <p>250km for 24 hours...!</p>-->
-                                </div>
-
-                            </section>
-
-
-
-                        </div>
-                        <div class="modal-footer bg-dark">
-                            <button id="btnSaveVehicle" class="btn btn-outline-success" data-bs-dismiss="modal" type="button">Save Vehicle</button>
-                            <button id="btnUpdateVehicle" class="btn btn-outline-warning" data-bs-dismiss="modal" type="button">Update Details</button>
-                            <button id="btnDeleteVehicle" class="btn btn-outline-danger" data-bs-dismiss="modal" type="button">Delete Vehicle</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
             <!-- partial:../../partials/_footer.html -->
             <footer class="footer">

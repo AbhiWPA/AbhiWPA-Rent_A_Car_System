@@ -19,6 +19,7 @@ public class Vehicle {
     private String brand;
     private String model;
     private String fuel;
+    private String vehicleType;
     private String mileage;
     private int passengers;
     private String monthlyRate;
