@@ -26,14 +26,15 @@ function vehicleIdGen(){
 $("#btnSaveVehicle").click(function () {
     saveVehicle();
 
-    location. reload();
+    location.reload();
 });
 
 function saveVehicle() {
     let vehicleId = parseInt(lastVehicleId)+1;
     let brand = $("#txtVehicleBrand").val();
     let model = $("#txtVehicleModel").val();
-    let fuel = $("#cmbFuelType").val();
+    let fuel = $("#cmbFuelType option:selected").text();
+    let vehicleType = $("#cmbVehicleType option:selected").text();
     let mileage = $("#txtMileage").val();
     let passengers = $("#txtPassengers").val();
     let monthlyRate = $("#txtMonthlyRate").val();
@@ -50,6 +51,7 @@ function saveVehicle() {
         brand : brand,
         model : model,
         fuel : fuel,
+        vehicleType : vehicleType,
         mileage : mileage,
         passengers : passengers,
         monthlyRate : monthlyRate,
