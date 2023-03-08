@@ -170,46 +170,32 @@
                     <div class="modal-body bg-dark">
                         <section class="text-white">
 
-                            <div class="mb-3">
-                                <label for="cmbSelectVehicle" class="form-label fw-bold text-white">Select Vehicle</label>
-                                <select id="cmbSelectVehicle" class="form-select text-black">
-                                    <option selected class="text-black">Choose...</option>
+                            <div class="mb-3 col-12">
+                                <label for="cmbSelectVehicle" class="form-label fw-bold text-white">Select Vehicle</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <button class="btn btn-primary col-2 mx-auto mb-auto" type="button" id="btnVehicleSearch">Search</button>
+                                <select id="cmbSelectVehicle" class="form-select text-black col-9">
+                                    <option selected class="text-black col-9">Choose...</option>
                                 </select>
 
-                                <label for="cmbVehicleNumber" class="form-label fw-bold text-white">Select Vehicle Number</label>
-                                <select id="cmbVehicleNumber" class="form-select text-black">
-                                    <option selected class="text-black">Choose...</option>
-                                </select>
                             </div>
 
-                            <div class="mb-3 shadow-none">
-                                <label class="form-label text-white" for="txtVehicleBrand">Brand</label>
-                                <input class="form-control" id="txtVehicleBrand" multiple type="text">
+                            <div class="shadow-none" style="">
+                                <label class="form-label text-white" for="imgVehicle">Vehicle Photo</label>
+                                <img src="#" id="imgVehicle" style="height: 200px; background-color: white;">
                             </div>
+
                             <div class="mb-3">
-                                <label class="form-label text-white" for="txtVehicleModel">Model</label>
-                                <input class="form-control" id="txtVehicleModel" type="text">
+                                <label class="form-label text-white" for="txtFuelType">Fuel type</label>
+                                <input id="txtFuelType" type="text" class="form-control">
                             </div>
-                            <div class="mb-3">
-                                <label class="form-label text-white" for="cmbFuelType">Fuel type</label>
-                                <select id="cmbFuelType" name="id" class="form-select">
-                                    <option value="1" selected>Desel</option>
-                                    <option value="1" selected>Petrol</option>
-                                </select>
-                            </div>
+
                             <div class="mb-3">
                                 <label class="form-label text-white" for="txtMileage">Mileage</label>
                                 <input class="form-control" id="txtMileage" type="text">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label text-white" for="txtPassengers">Nmber Of Passengers</label>
+                                <label class="form-label text-white" for="txtPassengers">Number Of Passengers</label>
                                 <input class="form-control" id="txtPassengers" type="number">
-                                <!--                                    <p>250km for 24 hours...!</p>-->
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label text-white" for="txtMonthlyRate">Monthly Rate</label>
-                                <input class="form-control" id="txtMonthlyRate" type="text">
                                 <!--                                    <p>250km for 24 hours...!</p>-->
                             </div>
 
@@ -232,26 +218,28 @@
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label text-white" for="txtRegistrationNumber">Registration NUmber</label>
-                                <input class="form-control" id="txtRegistrationNumber" type="text">
-                                <!--                                    <p>250km for 24 hours...!</p>-->
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label text-white" for="txtServiceMilage">Last Service Milage</label>
-                                <input class="form-control" id="txtServiceMilage" type="text">
-                                <!--                                    <p>250km for 24 hours...!</p>-->
-                            </div>
-
-                            <div class="mb-3">
                                 <label class="form-label text-white" for="txtColor">Color</label>
                                 <input class="form-control" id="txtColor" type="color">
                                 <!--                                    <p>250km for 24 hours...!</p>-->
                             </div>
 
+                            <hr>
+
                             <div class="mb-3">
-                                <label class="form-label text-white" for="carPicture">Upload Car Picture</label>
-                                <input class="form-control" id="carPicture" type="file">
+                                <label class="form-label text-white" for="pickupDate">Pickup date</label>
+                                <input class="form-control" id="pickupDate" type="date">
+                                <!--                                    <p>250km for 24 hours...!</p>-->
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-white" for="reservedDate">Finish date</label>
+                                <input class="form-control" id="reservedDate" type="date">
+                                <!--                                    <p>250km for 24 hours...!</p>-->
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-white" for="fishLocation">Finish location</label>
+                                <input class="form-control" id="fishLocation" type="text">
                                 <!--                                    <p>250km for 24 hours...!</p>-->
                             </div>
 
@@ -261,9 +249,8 @@
 
                     </div>
                     <div class="modal-footer bg-dark">
-                        <button id="btnSaveVehicle" class="btn btn-outline-success" data-bs-dismiss="modal" type="button">Save Vehicle</button>
-                        <button id="btnUpdateVehicle" class="btn btn-outline-warning" data-bs-dismiss="modal" type="button">Update Details</button>
-                        <button id="btnDeleteVehicle" class="btn btn-outline-danger" data-bs-dismiss="modal" type="button">Delete Vehicle</button>
+                        <button id="btnSaveVehicle" class="btn btn-outline-success" data-bs-dismiss="modal" type="button">Rent Vehicle</button>
+                        <button id="btnDeleteVehicle" class="btn btn-outline-danger" data-bs-dismiss="modal" type="button">I Want a Driver!!!</button>
                     </div>
                 </div>
             </div>
