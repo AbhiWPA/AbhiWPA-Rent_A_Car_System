@@ -19,7 +19,7 @@ function loadVehicles() {
 
                 arr.push(v.brand+v.model).toString();
 
-                var row2 = '<option class="text-black" style="color: black;">'+ v.brand + " " +v.model +'</option>';
+                var row2 = '<option class="text-black" style="color: black;">'+ v.brand + " " +v.model + + "-" + v.registerNumber +'</option>';
                 $("#cmbSelectVehicle").append(row2);
             }
             console.log(vehicles)
