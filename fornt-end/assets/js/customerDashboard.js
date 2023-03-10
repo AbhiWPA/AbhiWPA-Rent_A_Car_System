@@ -2,7 +2,11 @@ let baseUrl = "http://localhost:8080/Car_Rental_System_war_exploded/";
 
 let vehicles = [];
 let arr = [];
+let lastReservationId;
 loadVehicles();
+
+let lastDriverId;
+reservationIdGen();
 
 function loadVehicles() {
     $.ajax({
@@ -19,7 +23,7 @@ function loadVehicles() {
 
                 arr.push(v.brand+v.model).toString();
 
-                var row2 = '<option class="text-black" style="color: black;">'+ v.brand + " " +v.model + + "-" + v.registerNumber +'</option>';
+                var row2 = '<option class="text-black" style="color: black;">'+ v.brand + " " +v.model + "  " + " (" + v.registerNumber +")"+'</option>';
                 $("#cmbSelectVehicle").append(row2);
             }
             console.log(vehicles)
@@ -28,31 +32,61 @@ function loadVehicles() {
     });
 }
 
-let selectedVehicle = $("#cmbSelectVehicle").val();
 
-$("#btnVehicleSearch").click(function () {
-    alert(selectedVehicle);
-    console.log(selectedVehicle)
+
+
+function reservationIdGen(){
+    $.ajax({
+        url: baseUrl+'reservation',
+        method: 'get',
+        dataType: "json",
+        success: function (resp) {
+            const reservatinIds = [0];
+            for (let r of resp.data) {
+                reservatinIds.push(r.id);
+            }
+            lastReservationId = reservatinIds.slice(-1);
+            console.log("last id generated "+lastReservationId);
+        }
+    });
+}
+
+$("#btnSaveReservation").click(function () {
+    saveReservation();
 });
 
-function fillTextFields() {
-    alert("mkjkhkj");
-    for (let i = 0; i < vehicles.length ; i++) {
-        let v = vehicles[i];
-        let name = v.brand + v.model;
+function saveReservation() {
+    let rId = parseInt(lastReservationId)+1;
+    let vehicle = $("#cmbSelectVehicle option:selected").text();
+    let customerName = $("#txtReservationCName").val();
+    let customerNIC = $("#txtNICCustomer").val();
+    let pickupDate = $("#pickupDate").val();
+    let finishDate = $("#reservedDate").val();
+    let finishLocation = $("#fishLocation").val();
 
-        if (name === selectedVehicle) {
-
-            $("#imgVehicle").setVal(v.image);
-            $("#txtFuelType").setText(v.fuel);
-            $("#txtMileage").setText(v.mileage);
-            $("#txtPassengers").setText(v.passengers);
-            $("#txtDailyRate").setText(v.dailyRate);
-            $("#txtFreeMileage").setText(v.freeMileage);
-            $("#txtExtraPrice").setText(v.extraPrice);
-            $("#txtColor").setText(v.color);
-
-
-        }
+    var reservation = {
+        id:rId,
+        vehicle: vehicle,
+        customerName: customerName,
+        customerNIC : customerNIC,
+        pickupDate : pickupDate,
+        finishDate : finishDate,
+        finishLocation : finishLocation
     }
+
+    $.ajax({
+        url: baseUrl+'reservation',
+        method: 'post',
+        contentType:"application/json",
+        data:JSON.stringify(reservation),
+        dataType:"json",
+        success: function (res) {
+            alert(res.message);
+        },
+        error:function (error){
+            let cause= JSON.parse(error.responseText).message;
+            alert(cause);
+        }
+
+    });
 }
